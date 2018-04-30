@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import './assets/styles/reset.css'
 import './assets/styles/border.css' // 解决多倍屏上面1像素边框的问题
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
