@@ -1,14 +1,19 @@
 <!-- template中只能有一个标签，所以用div包起来 -->
 <template>
-  <home-header></home-header>
+  <div>
+    <home-header></home-header>
+    <home-swiper></home-swiper>
+  </div>
 </template>
 
-<script type="text/javascript">
+<script>
 import HomeHeader from './components/Header'
+import HomeSwiper from './components/Swiper'
 export default {
   name: 'Home',
   components: {
-    HomeHeader
+    HomeHeader,
+    HomeSwiper
   }
 }
 </script>
