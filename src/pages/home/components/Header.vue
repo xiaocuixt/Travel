@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@/assets/styles/variables.styl"
+  @import "~styles/variables.styl"
 
   .header
     display: flex
