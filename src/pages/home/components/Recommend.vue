@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -18,29 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: 1,
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1803/1a/1aac2b1dd96b36ba3.water.jpg_200x200_8148509f.jpg',
-          title: '上海欢乐谷',
-          desc: '来这里寻找你所认识的上海'
-        },
-        {
-          id: 2,
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/4f/146031f0bc5d7e0dd960d3f5bf0c9eca.water.jpg_200x200_f22705c9.jpg',
-          title: '上海科技馆',
-          desc: '技术改变生活，只有想不到没有做不到'
-        },
-        {
-          id: 3,
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/ba/ba5f873a22327e0f.water.jpg_200x200_9bf5cc14.jpg',
-          title: '上海影视乐园',
-          desc: '真实艺术地展现上海的历史风貌和人文景观'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
