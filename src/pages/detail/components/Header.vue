@@ -13,7 +13,7 @@
       <router-link to="/">
         <span class="iconfont header-fixed-back">&#xe624;</span>
       </router-link>
-      景点详情
+      {{this.sightName}}
     </div>
   </div>
 </template>
@@ -29,8 +29,12 @@
         }
       }
     },
+    props: {
+      sightName: String
+    },
     methods: {
       handleScroll () {
+        console.log('xxxxxxxx')
         const top = document.documentElement.scrollTop
         if (top > 60) {
           let opacity = top / 140
