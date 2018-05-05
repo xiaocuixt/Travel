@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 
 import 'styles/reset.css'
 import 'styles/border.css' // 解决多倍屏上面1像素边框的问题
@@ -19,6 +20,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router, // 等价于rooter: rooter
+  store,
   components: { App }, // 等价于App: App,当键值相同时可省略写
   template: '<App/>'
 })

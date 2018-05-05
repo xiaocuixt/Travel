@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list">{{item.name}}</li>
+        <li class="search-item border-bottom" v-for="item of list" @click="handleCityClick(item.name)">{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
@@ -24,6 +24,13 @@ export default {
       keyword: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      // 单个数据修改时可直接commit mutations方法.如果是批量数据建议先dispatch actions从actions中commit mutations方法
+      this.$store.commit('mutateCity', city)
+      this.$router.push('/')
     }
   },
   computed: {
