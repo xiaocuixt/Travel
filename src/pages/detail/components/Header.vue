@@ -47,6 +47,10 @@
     },
     activated () {
       window.addEventListener('scroll', this.handleScroll)
+    },
+    // 离开页面时对全局window时间进行解绑
+    deactivated () {
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 </script>
@@ -68,6 +72,7 @@
       color: #fff
       font-size: .4rem
   .header-fixed
+    z-index: 2
     position: fixed
     left: 0
     top: 0
