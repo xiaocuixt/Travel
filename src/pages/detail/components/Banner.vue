@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_600x330_3b0fdac5.jpg">
+      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1712/5d/5d4f18e64813d0f6a3.img.jpg_600x330_f5959a0a.jpg">
       <div class="banner-info">
         <div class="banner-title">海昌海洋世界4A级景区</div>
         <div class="banner-number">
