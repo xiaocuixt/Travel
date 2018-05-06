@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
+import 'babel-polyfill' // 兼容不支持promise的浏览器
 
 import 'styles/reset.css'
 import 'styles/border.css' // 解决多倍屏上面1像素边框的问题

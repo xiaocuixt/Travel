@@ -4,7 +4,7 @@
       :key="item"
       :ref="item"
       @click="handleLetterClick"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart" //prevent阻止默认行为
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
     >{{item}}</li>
