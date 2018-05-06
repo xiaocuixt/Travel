@@ -12,32 +12,32 @@
 </template>
 
 <script>
-  export default {
-    name: 'CommonGallary',
-    props: {
-      imgs: {
-        type: Array,
-        default () {
-          return []
-        }
-      }
-    },
-    data () {
-      return {
-        swiperOption: {
-          pagination: '.swiper-pagination',
-          paginationType: 'fraction',
-          observeParents: true,
-          observer: true  //监测到自己或父级元素DOM结构变化时，会自我刷新
-        }
-      }
-    },
-    methods: {
-      handleGallaryClick () {
-        this.$emit('close')
+export default {
+  name: 'CommonGallary',
+  props: {
+    imgs: {
+      type: Array,
+      default () {
+        return []
       }
     }
+  },
+  data () {
+    return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        observeParents: true,
+        observer: true //监测到自己或父级元素DOM结构变化时，会自我刷新
+      }
+    }
+  },
+  methods: {
+    handleGallaryClick () {
+      this.$emit('close')
+    }
   }
+}
 </script>
 
 <style lang="stylus" scoped>

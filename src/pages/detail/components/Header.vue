@@ -19,44 +19,43 @@
 </template>
 
 <script>
-  export default {
-    name: 'DetailHeader',
-    data () {
-      return {
-        showAbs: true,
-        opacityStyle: {
-          opacity: 0
-        }
+export default {
+  name: 'DetailHeader',
+  data () {
+    return {
+      showAbs: true,
+      opacityStyle: {
+        opacity: 0
       }
-    },
-    props: {
-      sightName: String
-    },
-    methods: {
-      handleScroll () {
-        console.log('xxxxxxxx')
-        const top = document.documentElement.scrollTop
-        if (top > 60) {
-          let opacity = top / 140
-          opacity = opacity > 1 ? 1 : opacity
-
-          this.opacityStyle = {
-            opacity
-          }
-          this.showAbs = false
-        }else{
-          this.showAbs = true
-        }
-      }
-    },
-    activated () {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    // 离开页面时对全局window时间进行解绑
-    deactivated () {
-      window.removeEventListener('scroll', this.handleScroll)
     }
+  },
+  props: {
+    sightName: String
+  },
+  methods: {
+    handleScroll () {
+      const top = document.documentElement.scrollTop
+      if (top > 60) {
+        let opacity = top / 140
+        opacity = opacity > 1 ? 1 : opacity
+
+        this.opacityStyle = {
+          opacity
+        }
+        this.showAbs = false
+      }else{
+        this.showAbs = true
+      }
+    }
+  },
+  activated () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  // 离开页面时对全局window时间进行解绑
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
+}
 </script>
 
 <style lang="stylus" scoped>

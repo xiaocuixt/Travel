@@ -55,8 +55,7 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      // 单个数据修改时可直接commit mutations方法.如果是批量数据建议先dispatch actions从actions中commit mutations方法
-      this.mutateCity(city)
+      this.mutateCity(city) // 单个数据修改时可直接commit mutations方法.如果是批量数据建议先dispatch actions从actions中commit mutations方法
       this.$router.push('/')
     },
     ...mapMutations(['mutateCity'])
@@ -70,8 +69,8 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper);
-  },
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 
@@ -107,7 +106,7 @@ export default {
         .button
           margin: .1rem
           text-align: center
-          padding: .1rem 0;
+          padding: .1rem 0
           border: .02rem solid #ccc
           border-radius: .06rem
     .item-list

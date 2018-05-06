@@ -9,41 +9,45 @@
         </div>
       </div>
     </div>
-    <common-gallary
-      :imgs="gallaryImgs"
-      v-show="showGallary"
-      @close="handleGallaryClose"
-    ></common-gallary>
+    <fade-animation>
+      <common-gallary
+        :imgs="gallaryImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
-  import CommonGallary from 'common/gallary/Gallary'
+import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 
-  export default {
-    name: 'DetailBanner',
-    components: {
-      CommonGallary
+export default {
+  name: 'DetailBanner',
+  components: {
+    CommonGallary,
+    FadeAnimation
+  },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
+  data () {
+    return {
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
     },
-    props: {
-      sightName: String,
-      bannerImg: String,
-      gallaryImgs: Array
-    },
-    data () {
-      return {
-        showGallary: false,
-      }
-    },
-    methods: {
-      handleBannerClick () {
-        this.showGallary = true
-      },
-      handleGallaryClose () {
-        this.showGallary = false
-      }
+    handleGallaryClose () {
+      this.showGallary = false
     }
   }
+}
 </script>
 
 <style lang="stylus" scoped>

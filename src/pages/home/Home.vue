@@ -58,7 +58,8 @@ export default {
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  activated () {   //不管缓存与否，当页面重现显示时，都会执行
+  activated () {
+    //不管缓存与否，当页面重现显示时，都会执行
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()

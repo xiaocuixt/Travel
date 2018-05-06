@@ -13,12 +13,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'DetailList',
-    props: {
-      categoryList: Array
-    }
+export default {
+  name: 'DetailList',
+  props: {
+    categoryList: Array
   }
+}
 </script>
 
 <style lang="stylus" scoped>
