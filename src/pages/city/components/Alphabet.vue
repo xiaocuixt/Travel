@@ -1,10 +1,11 @@
 <template>
   <ul class="list">
+    <!-- prevent阻止默认行为 -->
     <li class="item" v-for="item of letters"
       :key="item"
       :ref="item"
       @click="handleLetterClick"
-      @touchstart.prevent="handleTouchStart" //prevent阻止默认行为
+      @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
     >{{item}}</li>
@@ -38,7 +39,7 @@ export default {
   },
   methods: {
     handleLetterClick (e) {
-      this.$emit('change', e.target.innerText )
+      this.$emit('change', e.target.innerText)
     },
     handleTouchStart () {
       this.touchStatus = true
@@ -49,7 +50,7 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        this.timer = setTimeout( () => {
+        this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index <= this.letters.length) {

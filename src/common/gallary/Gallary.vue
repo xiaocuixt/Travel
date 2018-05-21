@@ -28,7 +28,7 @@ export default {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
         observeParents: true,
-        observer: true //监测到自己或父级元素DOM结构变化时，会自我刷新
+        observer: true // 监测到自己或父级元素DOM结构变化时，会自我刷新
       }
     }
   },
