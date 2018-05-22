@@ -9,6 +9,7 @@
     <div class="content">
       <detail-list :categoryList="categoryList"></detail-list>
     </div>
+    <detail-order></detail-order>
   </div>
 </template>
 
@@ -16,6 +17,7 @@
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
+import DetailOrder from './components/Order'
 import axios from 'axios'
 
 export default {
@@ -23,7 +25,8 @@ export default {
   components: {
     DetailBanner,
     DetailHeader,
-    DetailList
+    DetailList,
+    DetailOrder
   },
   data () {
     return {
@@ -57,8 +60,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-  .content
-    height: 50rem
-</style>
