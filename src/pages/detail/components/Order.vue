@@ -4,7 +4,9 @@
       <div class="iconfont order-consult">&#xe63e;</div>
       <div class="order-consult-text">咨询</div>
     </div>
-    <div class="order-link">立即预定</div>
+    <router-link to="/order/new">
+      <div class="order-link">立即预定</div>
+    </router-link>
   </div>
 </template>
 <script>
